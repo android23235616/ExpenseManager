@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+       tools:context="com.soumyadeb.expensemanager.CurrentTripActivity">
+  
+
+    <LinearLayout
+        android:layout_marginTop="16dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/linear"
+        android:layout_centerHorizontal="true">
+    <ImageView
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_marginTop="4dp"
+        android:src="@mipmap/ic_launcher"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:id="@+id/textView1"
+        android:layout_height="wrap_content"
+        android:text="EXP Manager"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="8dp"
+       android:textStyle="bold"
+        android:textSize="40sp"
+        />
+    </LinearLayout>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:layout_below="@id/linear"
+        android:textColor="@android:color/black"
+        android:background="@android:color/white"
+        android:layout_centerHorizontal="true"
+        android:paddingRight="4dp"
+        android:paddingLeft="4dp"
+        android:id="@+id/textView2"
+        android:text="From: New Delhi To: Bhubaneswar"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="Balance Left: Rs."
+        android:id="@+id/textView3"
+        android:textStyle="bold"
+        android:layout_below="@+id/textView2"
+        android:layout_centerHorizontal="true"/>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:id="@+id/linear1"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/textView3"
+        android:layout_marginTop="64dp"
+        android:orientation="vertical"
+        android:layout_centerHorizontal="true">
+        <Button
+            android:layout_width="260dp"
+            android:layout_height="64dp"
+            android:text="add expense"
+            style="@style/ButtonTheme"
+            android:onClick="addExpense"
+            android:id="@+id/button1"/>
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="64dp"
+            android:layout_marginTop="28dp"
+            android:text="view all expenses"
+            style="@style/ButtonTheme"
+            android:onClick="allExpenses"
+            android:id="@+id/button2"
+            />
+
+
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="20dp">
+        <Button
+            android:layout_width="120dp"
+            android:layout_height="64dp"
+            android:text="home"
+            android:layout_marginRight="46dp"
+            android:onClick="mainMenu"
+            style="@style/ButtonTheme"
+            android:layout_marginTop="16dp"
+            android:id="@+id/button4"/>
+        <Button
+            android:layout_width="120dp"
+            android:layout_height="64dp"
+            android:text="end trip"
+            android:layout_marginLeft="46dp"
+            style="@style/ButtonTheme"
+            android:onClick="endTrip"
+            android:hapticFeedbackEnabled="true"
+            android:layout_marginTop="16dp"
+            android:id="@+id/button3"/>
+
+    </LinearLayout>
+
+
+</RelativeLayout>

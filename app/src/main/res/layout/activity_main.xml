@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+
+    tools:context="com.soumyadeb.expensemanager.MainActivity">
+
+    <ImageView
+       android:layout_width="130dp"
+       android:layout_height="130dp"
+       android:id="@+id/imageView1"
+       android:layout_marginTop="28dp"
+       android:layout_centerHorizontal="true"
+       android:src="@mipmap/ic_launcher"/>
+    <TextView
+       android:layout_width="wrap_content"
+        android:id="@+id/textView1"
+        android:layout_marginTop="8dp"
+        android:textStyle="bold"
+       android:layout_height="wrap_content"
+       android:text="EXP Manager"
+        android:textColor="#616161"
+       android:layout_centerHorizontal="true"
+       android:layout_below="@id/imageView1"
+        android:textSize="40sp"
+       />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="Ready to start a new trip? ;)"
+        android:id="@+id/textView"
+
+        android:textStyle="italic"
+        android:layout_below="@+id/textView1"
+        android:layout_centerHorizontal="true"
+       />
+    <LinearLayout
+        android:layout_width="260dp"
+        android:layout_centerHorizontal="true"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/textView1"
+        android:layout_marginTop="84dp"
+        android:orientation="vertical">
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="64dp"
+            android:text="current trip"
+            style="@style/ButtonTheme"
+            android:onClick="currentTrip"
+            android:id="@+id/button1"/>
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="64dp"
+            android:layout_marginTop="28dp"
+            android:text="start a trip"
+            style="@style/ButtonTheme"
+            android:onClick="addTrip"
+            android:id="@+id/button2"/>
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="64dp"
+                android:text="View  all trips"
+                android:onClick="viewAllTrips"
+                style="@style/ButtonTheme"
+                android:layout_marginTop="28dp"
+                android:id="@+id/button4"/>
+
+    </LinearLayout>
+
+
+
+</RelativeLayout>

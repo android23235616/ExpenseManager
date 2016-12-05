@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp"
+    tools:context="com.soumyadeb.expensemanager.AddTripActivity">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="Enter trip details"
+        android:id="@+id/textView"
+        android:textStyle="bold"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true" />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_below="@id/textView"
+        android:layout_marginTop="46dp"
+        android:id="@+id/linear1">
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textStyle="bold"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:text="Trip ID:"
+            android:id="@+id/textView1"
+            android:layout_weight="5"
+            />
+        <EditText
+            android:layout_width="match_parent"
+            android:id="@+id/editText"
+            style="@style/EditTextStyle"
+           android:layout_weight="2" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:id="@+id/linear2"
+        android:layout_below="@id/linear1"
+        android:layout_marginTop="36dp">
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textStyle="bold"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:text="From:"
+            android:id="@+id/textView2"
+            android:layout_weight="5"
+            />
+        <EditText
+            android:layout_width="match_parent"
+            style="@style/EditTextStyle"
+            android:id="@+id/editText1"
+            android:layout_weight="2" />
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_below="@id/linear2"
+        android:layout_marginTop="36dp"
+        android:id="@+id/linear3">
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:text="To:"
+            android:textStyle="bold"
+            android:id="@+id/textView3"
+            android:layout_weight="5"
+            />
+        <EditText
+            android:layout_width="match_parent"
+            style="@style/EditTextStyle"
+            android:id="@+id/editText2"
+            android:layout_weight="2" />
+    </LinearLayout>
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_below="@id/linear3"
+    android:id="@+id/linear4"
+    android:orientation="horizontal"
+    android:layout_marginTop="36dp">
+    <EditText
+        android:layout_width="wrap_content"
+        style="@style/EditTextStyle"
+        android:inputType="date"
+        android:ems="10"
+        android:textStyle="bold"
+        android:id="@+id/editText3"
+        android:layout_weight="1"
+        android:hint="Start Date"
+        android:layout_marginRight="8dp"
+
+      />
+
+    <EditText
+        android:layout_width="wrap_content"
+        style="@style/EditTextStyle"
+        android:inputType="date"
+        android:ems="10"
+        android:textStyle="bold"
+        android:id="@+id/editText4"
+      android:layout_weight="1"
+        android:hint="End Date"
+        android:layout_marginLeft="8dp"/>
+</LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_below="@id/linear4"
+        android:layout_marginTop="36dp"
+        android:id="@+id/linear5">
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textStyle="bold"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:text="Approved Budget: Rs."
+            android:id="@+id/textView5"
+            android:layout_weight="3"
+            />
+        <EditText
+            android:layout_width="match_parent"
+            style="@style/EditTextStyle"
+            android:id="@+id/editText5"
+            android:inputType="number"
+            android:layout_weight="4" />
+    </LinearLayout>
+
+
+
+    <Button
+        android:layout_width="260dp"
+        android:layout_marginTop="32dp"
+        android:layout_centerHorizontal="true"
+        style="@style/ButtonTheme"
+        android:layout_height="64dp"
+        android:text="start trip"
+        android:onClick="updateDatabase"
+        android:layout_below="@id/linear5"
+        android:id="@+id/button1"/>
+</RelativeLayout>
